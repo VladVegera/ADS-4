@@ -32,12 +32,12 @@ int binsearch(int *arr, int left, int right, int a) {
     while (l <= r)  {
         mid = (l + r) / 2;
         if (arr[mid] == a) {
-            return binsearch(arr, left, mid - 1, a) + binsearch(arr, mid + 1, right, a) + 1;
+          return binsearch(arr, left, mid - 1, a)+binsearch(arr, mid + 1, right, a)+1;
         }
         if (a < arr[mid])
-            r = mid - 1;
+          r = mid - 1;
         else
-            l = mid + 1;
+          l = mid + 1;
     }
     return 0;
 }

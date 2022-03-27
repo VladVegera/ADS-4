@@ -20,8 +20,6 @@ int countPairs2(int *arr, int len, int value) {
           count++;
         }
       }
-    } else {
-      break;
     }
   }
   return count;

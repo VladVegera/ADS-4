@@ -32,7 +32,7 @@ int binsearch(int *arr, int left, int right, int a) {
     while (l <= r)  {
         mid = (l + r) / 2;
         if (arr[mid] == a) {
-          return binsearch(arr, left, mid - 1, a)+binsearch(arr, mid + 1, right, a)+1;
+return binsearch(arr, left, mid-1, a)+binsearch(arr, mid+1, right, a)+1;
         }
         if (a < arr[mid])
           r = mid - 1;
@@ -45,7 +45,7 @@ int binsearch(int *arr, int left, int right, int a) {
 int countPairs3(int *arr, int len, int value) {
     int count = 0;
     int values;
-    for (int b = 0; b < len - 1; ++k) {
+    for (int b = 0; b < len - 1; ++b) {
         values = value - arr[b];
         count += binsearch(arr, b, len, values);
     }
